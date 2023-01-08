@@ -9,14 +9,11 @@ from tifffile import imsave
 from multiprocessing import Process
 import multiprocessing as mp
 
-# import tifffile
+# Change these paths
+inputDir = r"ValidationSet\Val_1\Val_1_CellProfilerProcessed.tiff"
+outputDir = r"ValidationSet\Val_1\Val_1_CellProfilerProcessed_Eroded.tiff"
 
 
-inputDir = r"C:\Users\ssbcl\OneDrive\Documents\School\IndependentStudy\Data\ValidationSet\Val_1\Val_1_CellProfilerProcessed.tiff"
-
-# inputDir = r"C:\Users\ssbcl\OneDrive\Documents\School\IndependentStudy\Data\Stalk1_4p5um_1272_4K_HMDS_clean_subset_segmented\2\Stalk1_4p5um_1272_4K_HMDS_clean_subset_smaller.tiff"
-
-outputDir = r"C:\Users\ssbcl\OneDrive\Documents\School\IndependentStudy\Data\ValidationSet\Val_1\Val_1_CellProfilerProcessed_Eroded.tiff"
 
 # Program to count islands in boolean 2D matrix
 class Graph:

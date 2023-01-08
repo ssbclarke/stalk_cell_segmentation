@@ -3,8 +3,9 @@
 import glob
 import tifffile
 
-inputDir = r"C:\Users\ssbcl\OneDrive\Documents\School\IndependentStudy\Data\ValidationSet\Val_5\Raw"
-outputDir = r"C:\Users\ssbcl\OneDrive\Documents\School\IndependentStudy\Data\ValidationSet\Val_5\Val_5.tiff"
+# Change these directories to match your particular environment
+inputDir = r"ValidationSet\Val_1\Raw"
+outputDir = r"ValidationSet\Val_1\Raw\Val_1.tiff"
 
 with tifffile.TiffWriter(outputDir) as stack:
     for filename in glob.glob(inputDir + "\*.tif"):
