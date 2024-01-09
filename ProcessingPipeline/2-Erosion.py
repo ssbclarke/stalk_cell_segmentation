@@ -10,8 +10,8 @@ from multiprocessing import Process
 import multiprocessing as mp
 
 # Change these paths
-inputDir = r"ValidationSet\Val_1\Val_1_CellProfilerProcessed.tiff"
-outputDir = r"ValidationSet\Val_1\Val_1_CellProfilerProcessed_Eroded.tiff"
+inputDir = r"..\ValidationSet\Val_1\Val_1_CellProfilerProcessed.tiff"
+outputDir = r"..\ValidationSet\Val_1\Val_1_CellProfilerProcessed_Eroded_V2.tiff"
 
 
 
@@ -42,14 +42,19 @@ class Graph:
         # These arrays are used to get row and
         # column numbers of 8 neighbours
         # of a given cell
-        rowNbr = [-1, -1, -1,  0, 0,  1, 1, 1]
-        colNbr = [-1,  0,  1, -1, 1, -1, 0, 1]
+        # rowNbr = [-1, -1, -1,  0, 0,  1, 1, 1]
+        # colNbr = [-1,  0,  1, -1, 1, -1, 0, 1]
+
+        # NEW: Making neighbors just up,down,left, and right so that we don't count diagonals as islands
+        rowNbr = [-1,  0, 0, 1]
+        colNbr = [0, -1, 1, 0]
  
         # Mark this cell as visited
         visited[i][j] = True
  
         # Recur for all connected neighbours
-        for k in range(8):
+        # for k in range(8):
+        for k in range(4):
             if self.isSafe(i + rowNbr[k], j + colNbr[k], visited):
                 self.DFS(i + rowNbr[k], j + colNbr[k], visited)
  
@@ -79,6 +84,14 @@ class Graph:
         return count
 
 
+# example = np.array([
+#     [0,255,255],
+#     [255,0,255],
+#     [255,255,0]
+# ])
+
+# g_e = Graph(len(example), len(example[0]), example)
+# g_e.countIslands()
 
 # Loading data
 print("The selected stack is a .tif")
