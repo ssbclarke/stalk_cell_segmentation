@@ -1,4 +1,8 @@
 ProcessingPipeline/WIP_2-Erosion_Multithreaded.py
+ProcessingPipeline/Plotting.py
+ProcessingPipeline/1-StalkCellProcessing3D.py
+Images/*
+Images
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

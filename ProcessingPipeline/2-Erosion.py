@@ -11,7 +11,7 @@ import multiprocessing as mp
 
 # Change these paths
 inputDir = r"..\ValidationSet\Val_1\Val_1_CellProfilerProcessed.tiff"
-outputDir = r"..\ValidationSet\Val_1\Val_1_CellProfilerProcessed_Eroded_V2.tiff"
+outputDir = r"..\ValidationSet\Val_1\Val_1_CellProfilerProcessed_Eroded.tiff"
 
 
 
