@@ -117,6 +117,8 @@ env.bak/
 venv.bak/
 segenv
 segenv/*
+valenv
+valenv/*
 
 # Spyder project settings
 .spyderproject
